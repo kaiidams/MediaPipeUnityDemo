@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/control_utils/control_utils.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/pose/pose.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div style="border: 1px solid blue">
+    <video id="video" width="320" height="240" autoplay></video>
+  </div>
+  <div style="border: 1px solid red">
+    <canvas id="canvas" width="320" height="240" autoplay></canvas>
+  </div>
+  <div style="border: 1px solid green">
+    <textarea id='textarea'></textarea>
+  </div>
+  <script src="index.js"></script>
+</body>
+</html>
