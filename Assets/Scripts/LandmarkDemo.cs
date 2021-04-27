@@ -37,9 +37,10 @@ public class LandmarkDemo : MonoBehaviour
         for (int i = 0; i < this.currentPose.poseLandmarks.Count; i++)
         {
             var o = this.landmarkObjects[i];
-            var p = this.currentPose.poseLandmarks[i];
-            p.y = 2 - p.y;
-            o.transform.position = p;
+            var position = this.currentPose.poseLandmarks[i];
+            position.y = 1.0f - position.y;
+            position.x = position.x - 0.5f;
+            o.transform.position = position;
         }
     }
 }

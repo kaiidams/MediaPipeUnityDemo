@@ -21,6 +21,7 @@ public class MiniWebServer : MonoBehaviour
     private readonly byte[] HeaderEnd = new byte[] { 13, 10, 13, 10 };
 
     public int listenPort = 5555;
+    public MediaPipeIKControl ikControl;
 
     Thread thread;
     bool isCanceled;
@@ -49,6 +50,7 @@ public class MiniWebServer : MonoBehaviour
         if (queue.TryDequeue(out message))
         {
             this.demo.OnPoseResults(message);
+            this.ikControl.OnPoseResults(message);
         }
     }
 
